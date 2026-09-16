@@ -22,3 +22,6 @@ Visual Studio Code + Metals + sbt
 
 ### Entorno 3
 IntelliJ IDEA Community + sbt
+
+## Parte 2 — 
+## Parte 3 — 

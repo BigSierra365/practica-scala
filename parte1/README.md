@@ -15,12 +15,14 @@
 2. Actualizar version de `pip`**
 
 ```cmd
-python -m pip install --upgrade pip
+python --version
 ```
 
 ```cmd
 python -m pip install --upgrade pip
 ```
+
+![Versión de Python](../images/python_version.png)
 
 ---
 
@@ -122,19 +124,18 @@ cs launch --use-bootstrap almond --scala 2.12.21 -- --install --id scala212 --di
 
 ---
 
-### 4️⃣ Verificación de la versión de Scala
-
+## 1.3 Verificación de la versión de Scala
 Se creó un nuevo Notebook con Almond y se ejecutó una celda para comprobar la versión utilizada:
 
 ```scala
-[código utilizado para comprobar la versión de Scala]
+println(scala.util.Properties.versionNumberString)
 ```
 
-![Versión de Scala utilizada](images/jupyter-scala-version.png)
+![Versión de Scala utilizada](../images/08_scala_verify_version.png)
 
 ---
 
-### 5️⃣ Ejecución de código Scala
+## 1.4. Ejecución de código Scala
 
 **Prueba 1 — Concatenación de cadenas**
 

@@ -7,7 +7,7 @@
 
 ---
 
-# 🟠 Entorno 1 — JupyterLab + Almond Kernel + Scala 2.12.21
+# 🟠 1. Entorno 1 — JupyterLab + Almond Kernel + Scala 2.12.21
 
 ## 1.1 Instalación de JupyterLab.
 ### Requerimientos previos
@@ -168,3 +168,107 @@ println(lenguajes)
 ![Ejecución pruebas](../images/09_scala_tests.png)
 
 ---
+
+#🔵 2. Entorno 2 — Visual Studio Code + Metals + Scala 2.12.21 + JDK 17 + sbt
+
+## 2.1 Verificadión de JDK 17
+
+Mostramos la captura de la ejecución de los siguientes comandos para verificar la correcta versión de JDK.
+
+```powershell
+java -version
+```
+
+```powershell
+javac -version
+```
+
+![Resultado java -version](../images/jdk17_version2.1.png)
+
+
+
+---
+
+2️⃣ Instalación de Visual Studio Code
+Versión instalada: [indica la versión de VS Code]
+
+Mostrar imagen
+
+3️⃣ Instalación de Metals
+Nombre de la extensión: Scala (Metals)
+Estado de instalación: [Instalada / Habilitada]
+
+Mostrar imagen
+
+4️⃣ Instalación y comprobación de sbt
+powershell
+sbt --version
+
+[Pega aquí el resultado del comando]
+
+Mostrar imagen
+
+5️⃣ Creación del proyecto sbt scala-vscode
+
+Estructura creada:
+
+scala-vscode/
+├── build.sbt
+├── project/
+└── src/
+    └── main/
+        └── scala/
+            └── Main.scala
+
+Mostrar imagen
+
+6️⃣ Configuración de build.sbt
+scala
+scalaVersion := "2.12.21"
+
+name := "scala-vscode"
+
+Mostrar imagen
+
+7️⃣ Programa Main.scala
+scala
+object Main extends App {
+
+  val entorno = "Visual Studio Code"
+
+  println("Práctica de programación básica con Scala")
+  println(s"Ejecutando desde: $entorno")
+}
+
+Mostrar imagen
+
+8️⃣ Importación del proyecto con Metals
+
+[Describe brevemente el proceso: Metals detecta el build.sbt y ofrece importar el proyecto]
+
+Mostrar imagen
+
+9️⃣ Compilación del proyecto
+powershell
+sbt compile
+
+Mostrar imagen
+
+🔟 Ejecución del proyecto
+powershell
+sbt run
+
+Mostrar imagen
+
+✅ Checklist de evidencias — Entorno 2
+ Resultado de java -version
+ Visual Studio Code instalado
+ Extensión Metals instalada
+ Resultado de sbt --version
+ Estructura del proyecto
+ Contenido de build.sbt
+ Scala 2.12.21 configurado
+ Archivo Main.scala
+ Proyecto reconocido por Metals
+ Ejecución de sbt compile
+ Ejecución correcta de sbt run

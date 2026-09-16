@@ -63,7 +63,7 @@ jupyter lab
 ---
 
 ### Verificación de versión de JupyterLab
-Ejecutamos el comando para ver la version de JupyterLab.
+Ejecutamos el comando para ver la versión de JupyterLab.
 
 ```powershell
 jupyter lab --version
@@ -332,27 +332,106 @@ Una vez finalizada la indexación:
 
 ---
 
-9️⃣ Compilación del proyecto
-powershell
+## 2.9 Compilación del proyecto
+Desde la terminal integrada de Visual Studio Code, situados en la raíz del proyecto (`scala-vscode`), se ejecutó la tarea de compilación del proyecto.
+
+```powershell
 sbt compile
+```
+
+![Resultado de la compilación del proyecto](../images/22_vsc_proyect_metals_sbt_compile.png)
+
+---
+
+## 2.10 Ejecución del proyecto
+Se procedió a lanzar la ejecución de la aplicación desde la misma terminal integrada mediante la tarea run.
+
+```powershell
+sbt run
+```
+
+La herramienta localizó el punto de entrada principal definido en Main.scala e imprimió por la consola las trazas de texto configuradas, concluyendo con estado [success]:
+
+```Plaintext
+Práctica de programación básica con Scala
+Ejecutando desde: Visual Studio Code
+```
+
+![Ejecución de sbt run](../images/23_vsc_proyect_metals_sbt_run.png)
+
+---
+
+🟣 Entorno 3 — IntelliJ IDEA Community + Scala 2.12.21 + sbt
+
+[!IMPORTANT] Entorno de desarrollo basado en un IDE completo, recomendado para proyectos con múltiples archivos.
+
+1️⃣ Instalación de IntelliJ IDEA Community Edition
+
+[Describe brevemente el proceso de descarga e instalación]
 
 Mostrar imagen
 
-🔟 Ejecución del proyecto
+2️⃣ Instalación del plugin de Scala
+Nombre del plugin: Scala
+Estado de instalación: [Instalado / Reiniciado el IDE]
+
+Mostrar imagen
+
+3️⃣ Configuración de JDK 17
+
+[Describe cómo configuraste el JDK 17 para el proyecto]
+
+Mostrar imagen
+
+4️⃣ Creación del proyecto sbt scala-intellij
+
+[Describe brevemente la creación del proyecto desde el asistente de IntelliJ]
+
+Mostrar imagen
+
+5️⃣ Revisión de build.sbt
+scala
+scalaVersion := "2.12.21"
+
+name := "scala-intellij"
+
+Mostrar imagen
+
+6️⃣ Programa Main.scala
+scala
+object Main extends App {
+
+  val entorno = "IntelliJ IDEA"
+
+  println("Práctica de programación básica con Scala")
+  println(s"Ejecutando desde: $entorno")
+}
+
+Mostrar imagen
+
+7️⃣ Ejecución desde IntelliJ IDEA
+
+Mostrar imagen
+
+8️⃣ Ejecución mediante sbt
+powershell
+sbt compile
+
+[Pega aquí el resultado o adjunta captura]
+
 powershell
 sbt run
 
 Mostrar imagen
 
-✅ Checklist de evidencias — Entorno 2
- Resultado de java -version
- Visual Studio Code instalado
- Extensión Metals instalada
- Resultado de sbt --version
- Estructura del proyecto
- Contenido de build.sbt
+✅ Checklist de evidencias — Entorno 3
+ IntelliJ IDEA Community instalado
+ Plugin de Scala instalado
+ JDK 17 configurado
+ Proyecto sbt creado
  Scala 2.12.21 configurado
+ Estructura del proyecto
+ Archivo build.sbt
  Archivo Main.scala
- Proyecto reconocido por Metals
- Ejecución de sbt compile
- Ejecución correcta de sbt run
+ Ejecución desde IntelliJ IDEA
+ Ejecución mediante sbt run

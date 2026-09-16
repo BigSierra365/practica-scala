@@ -136,6 +136,7 @@ println(scala.util.Properties.versionNumberString)
 ---
 
 ## 1.4. Ejecución de código Scala
+En el Notebook se han creado varias celdas en las que se han ejecutado los siguientes ejemplos:
 
 **Prueba 1 — Concatenación de cadenas**
 
@@ -145,8 +146,6 @@ val version = "2.12.21"
 
 println(s"Hola desde $nombre $version")
 ```
-
-![Ejecución prueba 1](images/[nombre-de-tu-captura-1].png)
 
 **Prueba 2 — Operación numérica**
 
@@ -158,8 +157,6 @@ val resultado = a + b
 println(resultado)
 ```
 
-![Ejecución prueba 2](images/[nombre-de-tu-captura-2].png)
-
 **Prueba 3 — Colección sencilla**
 
 ```scala
@@ -168,14 +165,6 @@ val lenguajes = List("Scala", "Java", "Python")
 println(lenguajes)
 ```
 
-![Ejecución prueba 3](images/[nombre-de-tu-captura-3].png)
-
-### ✅ Checklist de evidencias — Entorno 1
-
-- [ ] JupyterLab ejecutándose
-- [ ] Almond disponible como kernel
-- [ ] Notebook utilizando Scala
-- [ ] Versión de Scala utilizada
-- [ ] Ejecución correcta de las tres pruebas
+![Ejecución pruebas](../images/09_scala_tests.png)
 
 ---

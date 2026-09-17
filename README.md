@@ -161,10 +161,3 @@ Aplicación que analiza las calificaciones de un grupo de estudiantes en dos eva
 [Ver documentación](parte3/parte3-2-intellij/README.md)
 
 ---
-
-## Entrega
-
-> [!CAUTION]
-> Antes de entregar, comprueba que el repositorio es **accesible por el profesor** y que todos los enlaces e imágenes del Markdown funcionan correctamente desde GitHub.
-
-**Enlace al repositorio:** `[https://github.com/usuario/practica-scala]`

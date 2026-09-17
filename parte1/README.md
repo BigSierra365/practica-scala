@@ -415,7 +415,7 @@ Configuracion del proyecto desde `New Project`.
 - **JDK:** `JDK 17`
 - **Scala Version:** `2.12.21`
 
-![Asistente de nuevo proyecto sbt en IntelliJ IDEA](../images/28_intellij_new_project_wizard.png)
+![Asistente de nuevo proyecto sbt en IntelliJ IDEA](../images/30_intellij_new_project_config.png)
 
 ---
 
@@ -425,15 +425,17 @@ Una vez sincronizado el proyecto, se comprobó que el descriptor `build.sbt` con
 ```scala
 name := "scala-intellij"
 
-version := "0.1"
-
 scalaVersion := "2.12.21"
 ```
 
+![Asistente de nuevo proyecto sbt en IntelliJ IDEA](../images/30_intellij_new_project_config.png)
+
 ---
 
-6️⃣ Programa Main.scala
-scala
+## 3.6. Programa Main.scala
+Se definió el punto de entrada de la aplicación en la ruta estándar `src/main/scala/Main.scala`, extendiendo el *trait* `App` para posibilitar su ejecución directa en la JVM:
+
+```scala
 object Main extends App {
 
   val entorno = "IntelliJ IDEA"
@@ -441,32 +443,51 @@ object Main extends App {
   println("Práctica de programación básica con Scala")
   println(s"Ejecutando desde: $entorno")
 }
+```
+
+![Asistente de nuevo proyecto sbt en IntelliJ IDEA](../images/30_intellij_new_project_config.png)
+
+---
 
 Mostrar imagen
 
-7️⃣ Ejecución desde IntelliJ IDEA
+## 3.7 Ejecución desde IntelliJ IDEA
+Se lanzó el programa utilizando las herramientas nativas del IDE (pulsando el botón Run del panel superior tras seleccionar el archivo principal).
 
-Mostrar imagen
+La consola integrada de ejecución compiló el código mediante el compilador interno de IntelliJ y ejecutó el punto de entrada empleando los binarios de JDK 17 (Eclipse Adoptium 17.0.20), mostrando la salida esperada y finalizando con código de retorno 0:
 
-8️⃣ Ejecución mediante sbt
-powershell
+![Resultado de compilación via Herramientas nativas de IntelliJ](../images/33_intellij_main_IDE_tool_run.png)
+
+---
+
+## 3.8 Ejecución mediante sbt
+Para validar el ciclo de construcción desacoplado del IDE, se abrió la terminal integrada de IntelliJ IDEA (Alt + F12), situada en el directorio raíz del proyecto (scala-intellij), y se ejecutaron las tareas estándar de sbt.
+
+![Muestra de la terminal integrada de IntelliJ](../images/intellij_built_in_terminal.png)
+
+### Compilación del proyecto con sbt
+Se ejecutó la tarea `compile` para verificar la resolución de dependencias y la generación de bytecode para Scala 2.12.21:
+
+```powershell
 sbt compile
+```
 
-[Pega aquí el resultado o adjunta captura]
+El compilador procesó el código fuente generando las clases en target/scala-2.12/classes y finalizando con estado [success]:
 
-powershell
+![Ejecución de la compilación con sbt](../images/34_intellij_main_sbt_compile.png)
+
+---
+
+### Ejecución de la aplicación con sbt
+Se procedió a ejecutar el punto de entrada mediante la tarea `run`.
+
+```powershell
 sbt run
+```
 
-Mostrar imagen
+La herramienta detectó el objeto ejecutable Main e imprimió las trazas por la consola integrada, confirmando la ejecución exitosa:
 
-✅ Checklist de evidencias — Entorno 3
- IntelliJ IDEA Community instalado
- Plugin de Scala instalado
- JDK 17 configurado
- Proyecto sbt creado
- Scala 2.12.21 configurado
- Estructura del proyecto
- Archivo build.sbt
- Archivo Main.scala
- Ejecución desde IntelliJ IDEA
- Ejecución mediante sbt run
+
+![Ejecución del archivo Main.scale con sbtr](../images/35_intellij_main_sbt_run.png)
+
+---

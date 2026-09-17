@@ -4,6 +4,7 @@
 ![Java](https://img.shields.io/badge/JDK-17-007396?style=for-the-badge&logo=openjdk&logoColor=white)
 ![OS](https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows11&logoColor=white)
 ![sbt](https://img.shields.io/badge/sbt-build_tool-EE0000?style=for-the-badge&logo=sbt&logoColor=white)
+![Jupyter](https://img.shields.io/badge/JupyterLab-Almond-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
 ---
 

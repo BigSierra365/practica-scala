@@ -361,41 +361,76 @@ Ejecutando desde: Visual Studio Code
 
 ---
 
-🟣 Entorno 3 — IntelliJ IDEA Community + Scala 2.12.21 + sbt
+# 🟣 3. Entorno 3 — IntelliJ IDEA Community + Scala 2.12.21 + sbt
+## 3.1 Instalación de IntelliJ IDEA Community Edition
+Se procedió a la instalación del IDE completo IntelliJ IDEA Community Edition para entornos de desarrollo con múltiples archivos y soporte avanzado.
 
-[!IMPORTANT] Entorno de desarrollo basado en un IDE completo, recomendado para proyectos con múltiples archivos.
+- **Herramienta instalada:** `IntelliJ IDEA Community Edition`
+- **Método de instalación:** Instalador ejecutable oficial para Windows 11.
+- **Enlace de descarga:** [Intellij IDEA Community Edition](https://www.jetbrains.com/idea/download/?section=windows)
+  
+![Página oficial de Intellij IDEA Community Edition y enlace de descarga](../images/24_intellij_page.png)
 
-1️⃣ Instalación de IntelliJ IDEA Community Edition
+![Pantalla de inicio de IntelliJ IDEA Community Edition](../images/25_intellij_home_screen.png)
 
-[Describe brevemente el proceso de descarga e instalación]
+---
 
-Mostrar imagen
+## 3.2 Instalación del soporte para Scala
+Para habilitar el soporte de desarrollo, navegación, refactorización y compilación de Scala dentro del IDE, se requiere la instalación del plugin oficial.
 
-2️⃣ Instalación del plugin de Scala
-Nombre del plugin: Scala
-Estado de instalación: [Instalado / Reiniciado el IDE]
+### Búsqueda e instalación del plugin
+1. Desde la pantalla de bienvenida o desde `Settings` $\rightarrow$ `Plugins`, se accedió a la pestaña **Marketplace**.
+2. Se localizó e instaló el plugin oficial `Scala` de *JetBrains*.
 
-Mostrar imagen
+![Búsqueda e instalación del plugin de Scala en Marketplace](../images/26_intellij_scala_plugin_search.png)
 
-3️⃣ Configuración de JDK 17
+3. Se verificó en la pestaña "Installed" que el plugin quedó activo y habilitado en el entorno de desarrollo.
 
-[Describe cómo configuraste el JDK 17 para el proyecto]
+![Plugin de Scala activo en IntelliJ IDEA](../images/27_intellij_scala_plugin_installed.png)
 
-Mostrar imagen
+---
 
-4️⃣ Creación del proyecto sbt scala-intellij
+## 3.3 Configuración de JDK 17 en el proyecto
+Se configuró el entorno para utilizar Java 17 (Temurin JDK 17) como runtime y SDK del proyecto.
 
-[Describe brevemente la creación del proyecto desde el asistente de IntelliJ]
+### Verificación del SDK
+Desde `Project Structure` (`Ctrl + Alt + Shift + S`) $\rightarrow$ `Project` $\rightarrow$ `SDK`, se comprobó que el SDK seleccionado apunta a la versión 17 instalada previamente en el sistema.
 
-Mostrar imagen
+![Configuración de JDK 17 como Project SDK](../images/28_intellij_jdk17_selected.png)
 
-5️⃣ Revisión de build.sbt
-scala
-scalaVersion := "2.12.21"
+También se verificó que al crear un proyecto, en la ventana ` New Project` la version de **Java** apunte al `JDK 17`.
 
+![Configuración de JDK 17 como Project SDK](../images/29_intellij_jdk17_autoselected_test_new_project.png
+)
+
+---
+
+## 3.4 Creación del proyecto sbt scala-intellij
+Se generó un nuevo proyecto Scala orquestado por la herramienta de construcción sbt.
+
+### Asistente de creación
+Configuracion del proyecto desde `New Project`.
+- **Nombre del proyecto:** `scala-intellij`
+- **Build tool:** `sbt`
+- **JDK:** `JDK 17`
+- **Scala Version:** `2.12.21`
+
+![Asistente de nuevo proyecto sbt en IntelliJ IDEA](../images/28_intellij_new_project_wizard.png)
+
+---
+
+## 3.5 Revisión del archivo build.sbt
+Una vez sincronizado el proyecto, se comprobó que el descriptor `build.sbt` contiene la versión explícita del compilador y el identificador correspondiente:
+
+```scala
 name := "scala-intellij"
 
-Mostrar imagen
+version := "0.1"
+
+scalaVersion := "2.12.21"
+```
+
+---
 
 6️⃣ Programa Main.scala
 scala
